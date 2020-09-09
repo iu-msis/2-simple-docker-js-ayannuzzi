@@ -1,0 +1,122 @@
+body {
+    background: #d8d7db;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: #17008a;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+
+}
+
+
+header {
+  background: 036 url(/examples/images/charlesdarwin.gif);
+  height: 60px;
+  color: #031cfc;
+}
+
+#head {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  padding: 60px;
+  text-align: center;
+  background: #a5a4a6;
+  color: white;
+  font-size: 30px;
+}
+cite {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454;
+  position: absolute;
+
+
+}
+.home {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454;
+  display: block;
+  position:inherit;
+     right: 0;
+     text-align: right;
+     width: 150px;
+
+
+}
+
+content {
+  border-left: 134px solid 069;
+  background: gray url(/examples/images/lizards.gif) repeat-y;
+  padding: 1px 20px 1em 40px;
+}
+h2 {
+  font-size: 1.5em;
+  color: 036;
+}
+
+h3 {
+  font-size: 1.25em;
+  color: 036;
+}
+
+.home-link {
+  color: #4b3066 !important;
+  float: left;
+  padding: 5px 10px;
+}
+
+.home-link:visited {
+  color: pink !important;
+}
+
+.home-link:hover {
+  color: green !important;
+}
+
+.home-link:active {
+  color: white !important;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.name {
+  color: #17008a;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#bold {
+  color: #17008a;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: oblique;
+}
+
+a.link{
+  color: gold !important;
+}
+
+
+
+  a:visited {
+    color: green !important;
+  }
+
+
+  a:hover {
+    color: hotpink !important;
+  }
+
+  a:active {
+    color: white !important;
+  }
+
+
+}
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
