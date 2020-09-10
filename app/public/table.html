@@ -25,7 +25,7 @@
 <div class="container">
   <h2 id= "head">List of my Favorite Books</h2>
   <p>I have read a lot of books to become a smart detective. Below are a few of my favorites:</p>
-  <table class="table table-bordered">
+  <table id="bookTable" class="table table-bordered">
     <thead>
       <tr>
         <th id="bold">Title</th>
@@ -118,5 +118,10 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 
-</body>
+  <script src="js/tablesort.min.js"></script>
+  <script>
+      //Tablesort plugin from https://github.com/tristen/tablesort/demo/
+    new Tablesort(document.getElementById('bookTable'));
+    </script>
+  </body>
 </html>
