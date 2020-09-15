@@ -22,28 +22,39 @@
     </ul>
 </nav>
 
+<h1 class="title">About Me</h1>
+
+<hr>
+
+<h2>I love books!</h2>
+<div id="vue-app">
+  <div class="widget">
+    <div class="user-profile">
+      <img :src="imageSource">
+      <div class="user-info">
+        <div id="full-name">{{ fullName }}</div>
+        <div>Email: {{ email }}</div>
+        <div>City: {{ countryoforigin }}</div>
+      </div>
+    </div>
+    <button @click="fetchData" id="fetch-button">Next User!</button>
+  </div>
+</div>
 <div class="container" style="margin-top:30px">
   <div class="row">
     <div class="col-sm-4">
-      <h2 id= "head"> About Me</h2>
       <p>Photo of me:</p>
       <a target="_blank" href="img/user.jfif">
-      <p> <img class="float-left" src="img/user.jfif" alt="Sherlock">
-      <cite>Sherlock image from mic.com</cite> </p> </a>
-
-      <a target="_blank" href="img/address.jfif">
-          <p> <img class="float-left" src="img/address.jfif" alt="address" >
-          <cite class="home">My home image from alamy.com</cite>
-     </p> </a>
+      <p> <img class="float-left" :src="picture" alt="Sherlock">
+      <cite>Image from randomuser.com</cite> </p> </a>
 
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
       <h5 id="head"> My Name is Sherlock Holmes</h5>
-      <p>Photo of my home is on the left</p>
-
-      <p>I was born January 6, 1857</p>
-      <p> That means I am 162 years old! </p>
+      <div class="birth">
+       <i class="fas fa-fw fa-birthday-cake"></i>{{ birth }}
+     </div>
       <p>I am from London and my address is 221B Baker St, London</p>
       <p>My email address is:</p>
       <p> <a href="mailto:sherlockholmes@aid.com?subject=feedback">sherlockholmes@aid.com </a></p>
