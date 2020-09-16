@@ -27,12 +27,9 @@
 
 <div id="vue-app">
 
-          <h3 v-bind:title="message">A little about me!</h3>
-
-          <div v-for="us in userList">
-            <span class="lastName">{{ us.lastName }}</span>,
-            <span clas="firstName">{{ us.firstName }}</span>
-            <span class="birthDate">{{ us.dob }}</span>
+          <h3>A little about me!</h3>
+          <h4>{{user.results[0].name}}</h4>,
+\
           </div>
   </div>
 </div>
@@ -56,7 +53,7 @@
       </div>
   </div>
 </div>
-<script src="js/index.app.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/index.app.js"></script>
 </body>
 </html>
