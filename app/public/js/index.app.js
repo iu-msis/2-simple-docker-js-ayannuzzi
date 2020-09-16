@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#vue-app',
   data: {
-    user:'user.results[0].name',
+    user:'',
   },
 
   created() {
