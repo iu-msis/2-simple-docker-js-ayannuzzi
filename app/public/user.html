@@ -22,38 +22,38 @@
     </ul>
 </nav>
 
-<h1 class="title">About Me</h1>
-<h2>I love books!</h2>
+<h1 id="head" class="title">About Me:</h1>
 
 <div id="vue-app">
-
-          <h3>A little about me!</h3>
-          <h4>{{user.results[0].name.first}} {{user.results[0].name.last}}</h4> 
-
+          <h5>My name is: {{user.results[0].name.first}} {{user.results[0].name.last}}</h5>
+          <h6> I am from {{user.results[0].location.country}}!</h6>
+          <p>My email address is: <a href="mailto:{{user.results[0].email}}">{{user.results[0].email}} </a></p>
           </div>
+          <div id="momentApp">
+            <p>I was born on {{ formatDate(someDate)}}.</p>
+            <p>That makes me {{ age}} years old!</p>
+            </div>
   </div>
 </div>
 <hr>
 <div class="container" style="margin-top:30px">
   <div class="row">
     <div class="col-sm-4">
-      <p>Photo of me:</p>
-      <a target="_blank" href="img/user.jfif">
-      <p> <img class="float-left" :src="picture" alt="Sherlock">
+      <a target="_blank" href="{{user.results[0].picture.medium}}">
+      <img src= "{{user.results[0].picture.medium}}" alt="person">
       <cite>Image from randomuser.com</cite> </p> </a>
 
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <p>I am from London and my address is 221B Baker St, London</p>
-      <p>My email address is:</p>
-      <p> <a href="mailto:sherlockholmes@aid.com?subject=feedback">sherlockholmes@aid.com </a></p>
-      <br>
+
+
 
       </div>
-  </div>
-</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/index.app.js"></script>
+    <script src="js/moment.app.js"></script>
 </body>
 </html>
