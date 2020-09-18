@@ -27,7 +27,7 @@
 <div id="vue-app">
           <h5>My name is: {{user.results[0].name.first}} {{user.results[0].name.last}}</h5>
           <h6> I am from {{user.results[0].location.country}}!</h6>
-          <p>My email address is: <a href="mailto:{{user.results[0].email}}">{{user.results[0].email}} </a></p>
+          <p>My email address is: <a v-bind:href="'mailto:' + user.results[0].email">{{user.results[0].email}} </a></p>
           </div>
           <div id="momentApp">
             <p>I was born on {{ formatDate(someDate)}}.</p>
@@ -38,18 +38,15 @@
 <hr>
 <div class="container" style="margin-top:30px">
   <div class="row">
-    <div class="col-sm-4">
-      <a target="_blank" href="{{user.results[0].picture.medium}}">
-      <img src= "{{user.results[0].picture.medium}}" alt="person">
+    <div id= "vue-app" class="col-sm-4">
+      <a v-bind:href="user.results[0].picture.medium">
+      <img v-bind:src="user.results[0].picture.medium" alt="person">
+</a>
       <cite>Image from randomuser.com</cite> </p> </a>
 
       <hr class="d-sm-none">
     </div>
-    <div class="col-sm-8">
 
-
-
-      </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
