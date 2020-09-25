@@ -25,6 +25,7 @@
 <h1 id="head" class="title">About Me:</h1>
 
 <div id="vue-app">
+
           <h5>My name is: {{user.results[0].name.first}} {{user.results[0].name.last}}</h5>
           <h6> I am from {{user.results[0].location.country}}!</h6>
           <a v-bind:href="user.results[0].picture.medium">
@@ -37,6 +38,9 @@
             <p>I was born on {{ formatDate(someDate)}}.</p>
             <p>That makes me {{ age}} years old!</p>
             </div>
+      <form v-on:submit.prevent="fetchUser">
+      <button>Switch User</button>
+      </form>
   </div>
 </div>
 <hr>
