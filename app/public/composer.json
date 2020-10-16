@@ -1,0 +1,14 @@
+{
+    "name": "iu-msis/homework",
+    "description": "A homework assignment",
+    "license": "private",
+    "authors": [{
+        "name": "Alexis Yannuzzi"
+    }],
+    "require": {
+      "ramsey/uuid": "^4.1"
+    },
+    "autoload": {
+        "classmap": ["class/DbConnection.php"]
+    }
+}
