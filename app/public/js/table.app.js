@@ -1,4 +1,4 @@
-var commentPage = new Vue({
+var app = new Vue({
   el: '#commentPage',
   data: {
     comments: [{
