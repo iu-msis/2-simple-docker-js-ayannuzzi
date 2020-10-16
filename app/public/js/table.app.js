@@ -1,7 +1,7 @@
-var app = new Vue({
-  el: '#certificationPage',
+var commentPage = new Vue({
+  el: '#commentPage',
   data: {
-    comment: [{
+    comments: [{
       id: "",
       commentText: "",
     }],
@@ -16,8 +16,8 @@ var app = new Vue({
       fetch('api/comments/')
       .then(response => response.json())
       .then(json => {
-        this.comment=json;
-        console.log(this.comment);
+        this.comments=json;
+        console.log(this.comments);
       });
     },
     createComment(){
@@ -32,7 +32,7 @@ var app = new Vue({
     .then( response => response.json())
     .then( json => {
       console.log("Returned from post:", json);
-      this.comment.push(json[0]);
+      this.comments.push(json[0]);
       this.newComment = this.newCommentData();
     });
     console.log("Creating (POSTING)...!");
