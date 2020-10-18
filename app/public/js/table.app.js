@@ -42,7 +42,7 @@ var app = new Vue({
     return {
       id: "",
       commentText: "",
-    }
+    };
   }
 },
 created() {
