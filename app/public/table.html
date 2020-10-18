@@ -44,15 +44,15 @@
   </table>
 </div>
 <br>
+<form v-on:submit.prevent="creatNewComment()" method="post" id="newCommentForm" >
 <div class="container" id="newCommentData">
-<form v-on:submit.prevent="creatComment()" method="post" role="form" >
  <h3>Write a New Comment!</h3>
  <br>
    <div class="form-group">
      <label for="commentText">Comment</label>
      <input type="textarea" v-model="newCommentData.commentText" id="commentText" name="comment" class="form-control" placeholder="Comment"><br>
    </div>
- <button type="submit" id="submitNewComment" form="comment_form" value="Submit" class="btn btn-primary">Submit a New Comment</button>
+ <input type="submit" id="submitNewComment" value="Submit" class="button">
 </form>
 </div>
 </div>
