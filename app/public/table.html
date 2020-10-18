@@ -42,20 +42,21 @@
             </tr>
     </tbody>
   </table>
-</div>
+
 <br>
-<form v-on:submit.prevent="creatNewComment()" method="post" id="newCommentForm" >
-<div class="container" id="newCommentData">
- <h3>Write a New Comment!</h3>
+<form v-on:submit.prevent="createComment()">
+    <div class="comments">
+    <h3>Write a New Comment!</h3>
  <br>
-   <div class="form-group">
-     <label for="commentText">Comment</label>
-     <input type="textarea" v-model="newCommentData.commentText" id="commentText" name="comment" class="form-control" placeholder="Comment"><br>
-   </div>
- <input type="submit" id="submitNewComment" value="Submit" class="button">
+    <div class="form-group">
+      <label for="commentText">Comment</label>
+      <input type="textarea" v-model="newCommentData.commentText" id="commentText" name="comment" class="form-control" placeholder="Comment"><br>
+    </div>
+   <input type="submit" id="submitNewComment" value="Submit" class="button">
 </form>
 </div>
 </div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
