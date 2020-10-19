@@ -3,12 +3,11 @@ var app = new Vue({
   data: {
     comments: [{
       id: "",
-      commentText: "",
+      commentText: ""
     }],
-    newComment: [{
-      id: "",
-      commentText: "",
-    }],
+    newComment: {
+      commentText: ""
+    }
   },
 
   methods: {
@@ -20,7 +19,7 @@ var app = new Vue({
         console.log(this.comments);
       });
     },
-    createComment(){
+    createComment( evt ){
       //make a line for getting the // ID
       fetch('api/comments/create.php',{
       method:'POST',
@@ -40,8 +39,7 @@ var app = new Vue({
   },
   newCommentData() {
     return {
-      id: "",
-      commentText: "",
+      commentText: ""
     };
   }
 },
