@@ -1,14 +1,14 @@
 var app = new Vue({
   el: '#commentPage',
   data: {
-    comments: [{
-      id: "",
-      commentText: ""
-    }],
-    newComment: {
-      commentText: ""
-    }
-  },
+      comments: [{
+        id:'',
+        commentText:''
+      }],
+      newComment: {
+        commentText:''
+      },
+    },
 
   methods: {
     fetchComment() {
@@ -31,7 +31,7 @@ var app = new Vue({
     .then( response => response.json())
     .then( json => {
       console.log("Returned from post:", json);
-      this.comments.push(json[0]);
+      this.comments =json;
       this.newComment = this.newCommentData();
     });
     console.log("Creating (POSTING)...!");
@@ -40,7 +40,7 @@ var app = new Vue({
   newCommentData() {
     return {
       commentText: ""
-    };
+    }
   }
 },
 created() {
