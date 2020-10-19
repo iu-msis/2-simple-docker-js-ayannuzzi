@@ -19,18 +19,19 @@ var app = new Vue({
         console.log(this.comments);
       });
     },
-    createComment( evt ){
+    createComment(){
       //make a line for getting the // ID
+      console.log("Test" + this.newComment.commentText);
       fetch('api/comments/create.php',{
       method:'POST',
       body: JSON.stringify(this.newComment),
       headers: {
-        "CONTENT_TYPE": "application/json; charset=utf-8"
+        "Content-Type": "application/json; charset=utf-8"
       }}
     )
     .then( response => response.json())
     .then( json => {
-      console.log("Returned from post:", json);
+      console.log("Returned from post:"+ json);
       this.comments =json;
       this.newComment = this.newCommentData();
     });
@@ -40,7 +41,7 @@ var app = new Vue({
   newCommentData() {
     return {
       commentText: ""
-    }
+    };
   }
 },
 created() {
